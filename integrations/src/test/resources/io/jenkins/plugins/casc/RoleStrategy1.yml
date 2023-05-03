@@ -44,24 +44,3 @@ jenkins:
             assignments:
               - "user1"
 
-  # System for test
-  securityRealm:
-    local:
-      allowsSignup: false
-      users:
-        - id: "admin"
-          password: "1234"
-        - id: "user1"
-          password: "password"
-
-  nodes:
-    - dumb:
-        mode: NORMAL
-        name: "agent1"
-        remoteFS: "/home/user1"
-        launcher: jnlp
-    - dumb:
-        mode: NORMAL
-        name: "agent2"
-        remoteFS: "/home/user1"
-        launcher: jnlp
